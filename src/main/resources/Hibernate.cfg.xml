@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="hibernate.connection.password">hello</property>
+  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/test3</property>
+  <property name="hibernate.connection.username">root</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name = "show_sql"> true </property>
+ <property name="HIBERNATE.HBM2DDL.auto">CREATE</property>
+ <!--  <mapping resource="Student.hbm.xml"/>
+  we dont need to provide mapping resource if we are using Annotations -->
+  
+  
+  <mapping class ="Student"/>
+  <!--  while giving mapping information we can give many things like class, resource, package, file, jar. 
+  		But if we are giving any package within the student.java program then we have to give the fully qualified class name. 
+  			ex: if the package name is com.egiants.hibernate.pojo then the class name should be here as com.egiants.hibernate.pojo.Student  -->
+ 
+ 
+ </session-factory>
+</hibernate-configuration>

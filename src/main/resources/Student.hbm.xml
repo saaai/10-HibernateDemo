@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 13, 2018, 9:44:40 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="Student" table="student"> <!--we are mapping Student class file with the Student table--> 
+        <id name="student_id" type="int"> <!-- type int is a primitive data type and we are using "id" tag to define the student_id column-->
+            <column name="STUDENT_ID" />
+            <generator class="assigned" />
+        </id>
+        <!-- we are using property tag to define name column -->
+        <property name="student_name" type="java.lang.String"> <!--type = String is a class type so it cannot be directly used as a primitive data type-->
+            <column name="STUDENT_NAME" />
+        </property>
+        <property name="student_address" type="java.lang.String">
+            <column name="STUDENT_ADDRESS" />
+        </property>
+        <property name="country" type="java.lang.String">
+            <column name="COUNTRY" />
+        </property>
+        <property name = "student_age" type="int">
+        <column name ="STUDENT_AGE"/>
+        </property>
+        <property name="Sex" type="java.lang.String">
+        <column name="Sex"/>
+        </property>
+        <property name="nickname" type="java.lang.String">
+        <column name="Nickname"/>
+        </property>
+        
+    </class>
+</hibernate-mapping>
+
+
+<!-- If we observe in the entire program, we have one column with id tag(becos student_id is a primary key) and the rest three column s are with property tags. -->
+
+
